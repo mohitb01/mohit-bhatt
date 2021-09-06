@@ -28,7 +28,7 @@ public class AddPet extends SerenityBase {
 @Given("^User set valid endpoint to add pet$")
 public void user_set_valid_endpoint_to_add_pet() throws Exception{
 	endPoint = Utility.createEndPoint(configurationsXlsMap.get("URL"),
-            APIEndPoints.POST_ENDPOINT);
+            APIEndPoints.PET_ENDPOINT);
 }
 
 

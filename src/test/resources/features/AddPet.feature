@@ -1,4 +1,5 @@
 @AddPets
+@Regression
 Feature: Pet functionality
 
 Scenario: To Verify user is able to add a new pet on the store

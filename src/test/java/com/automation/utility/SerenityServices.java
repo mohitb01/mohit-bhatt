@@ -19,6 +19,11 @@ public class SerenityServices {
 	public static Response put(String contentType, String body,String URL) throws Exception {
 		return SerenityRest.given().contentType(getContentType(contentType)).body(body).log().all().when().put(URL);
 	}
+	
+	public static Response get(String contentType,String URL) throws Exception {
+		return SerenityRest.given().contentType(getContentType(contentType)).log().all().when().get(URL);
+	}
+	
 	public static Response doRequest(RequestSpecification requestSpec,
             String methodType, String url) {
         switch (methodType.toLowerCase()) {

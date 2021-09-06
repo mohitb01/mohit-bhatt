@@ -10,7 +10,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @RunWith(CucumberWithSerenity.class)
 
 @CucumberOptions(strict = false, features = "src/test/resources/features/",
-        glue = { "com.automation.stepdefinitions" }, tags = { "@AddPets" },
+        glue = { "com.automation.stepdefinitions" }, tags = { "@Regression" },
         plugin = { "pretty", "html:target/cucumber",
                 "json:target/cucumber.json", "junit:target/cucumber.xml" })
 
