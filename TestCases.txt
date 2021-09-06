@@ -1,0 +1,118 @@
+Pet API
+
+PUT call
+1.To verify user is able to update the pet information.(categories,tags etc)
+2.To verify user receives an error message "Invalid ID supplied" with code 400 on incorrect ID
+3.To verify user receives an error message "Pet not found" with code 404 on incorrect pet name.
+4.To verify user receives validations messages for incorrect request body or Media type.
+
+POST call
+1.To verify user is able to add a new pet to store.
+2.To verify user is not able to add the pet with existing ID.
+3.To verify user receives validation message on missing mandatory parameters.
+
+GET by status
+1.To verify user is able to search pet by status as available,pending and sold.
+2.To verify response for pet information.
+3.To verify response headers.
+4.To verify user receives an error message "Invalid status value" with code 400 on giving incorrect status value.
+
+GET by tags
+1.To verify user is able to search pet by tags values.
+2.To verify user is able to get the results on supplying multiple tags with comma separated strings.
+3.To verify response for pet information.
+4.To verify response headers.
+5.To verify user receives an error message "Invalid tag value" with code 400 on giving incorrect tags value.
+
+GET by ID
+1.To verify user is able to search the pet by ID.
+2.To verify user receives an error message "Pet not found"
+3.To verify user receives an error message "Invalid ID supplied" with code 400 on supplying invalid ID.
+4.To verify response for pet information.
+5.To verify response headers.
+
+POST by formData
+1.To verify user is able to update the pet in the store and receives an updated response body.
+2.To verify user is able to update the pet using only ID.
+3.To verify user is able to update the pet using ID and name.
+4.To verify user is able to update the pet using ID,name and status.
+5.To verify user receives an error message for mandatoy ID field when not supplied.
+6.To verify user receives validation message on supplying non existing ID.
+7.To verify response for pet information.
+8.To verify response headers.
+
+DELETE using petID
+1.To verify user is able to delete the pet using pet ID and api-key.
+2.To verify user receives an error message on supplying invalid petID.
+
+POST uploadImage
+1.To verify user is able to upload pet image for supplied petID.
+2.To verify user is able to upload only image files .jpg,.img,png etc.
+3.To verify server reponse with large size image file.
+4.To verify validation messages for invalid media type other then application/octet-stream
+5.To verify validation message for mandatory ID fields.
+
+
+Store APIs
+
+GET inventory
+1.To verify user gets all inventory on the store by status.
+2.To verify response for pet information.
+3.To verify response headers.
+
+POST Order
+1.To verify user is able to place a order for a pet.
+2.To verify user get error message for invalid input.
+
+GET orderById
+1.To verify user is able to search order by orderID.
+2.To verify user receives an error message "Invalid ID supplied" with code 400 on incorrect order ID.
+3.To verify user receives an error message "Order not found" with code 404.
+
+DELETE order
+1.To verify user is able to delete order by orderID.
+2.To verify user receives an error message "Invalid ID supplied" with code 400 on incorrect order ID.
+3.To verify user receives an error message "Order not found" with code 404.
+
+User
+
+POST Create user
+1.To verify user is able to create a user with valid inputs.
+2.To verify user get validation message for Invalid inputs.
+3.To verify validation message for mandatory fields.
+
+POST Create multiple users
+1.To verify user is able to create multiple user in a go using valid inputs.
+2.To verify user get validation message for Invalid inputs.
+3.To verify validation message for mandatory fields.
+4.To verify user get response on both JSON and xml based on the supplied Media type.
+
+GET Login user
+1.To verify user is able to login successfully to system using valid username and password.
+2.To verify user receives an error message on passing incorrect username.
+3.To verify user receives an error message on passing incorrect password.
+4.To verify user logs out after the specified expire time.
+5.To verify user is unable to login after allowed call per hour limit.
+
+GET Logout
+1.To verify user is able to logout successfully from the system.
+
+GET userdetails
+1.To verify user get the details by username.
+2.To verify user receives an error message "Invalid username supplied" with code 400 on invaild username.
+3.To verify user receives validation message for mandatory field username.
+4.To verify user receives an error message "User not found" with code 404.
+
+PUT updateuser
+1.To verify login user is able to update the user by username.
+2.To verify user is not able to update the user if not already login.
+3.To verify validation message for mandatory fields.
+
+DELETE user
+1.To verify login user is able to delete the user by username.
+2.To verify user is not able to delete the user if not already login.
+3.To verify validation message for mandatory fields.
+
+
+
+
